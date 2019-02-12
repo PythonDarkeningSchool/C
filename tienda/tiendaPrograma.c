@@ -9,7 +9,7 @@ int main()
     // Declarando variables
     int  iBilletesVeinte, iMonedasDiez,
         iMonedasCinco, iMonedasDos, iMonedasPeso, iMonedasCincuentaCentavos;
-    float fTotalCompra, fCantidadRecibida, var, fCambio;
+    float fTotalCompra, fCantidadRecibida, fCambio;
 
     // Pidiendo datos al usuario
     printf("\n - Por favor ingrese el total de la compra: $");

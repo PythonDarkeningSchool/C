@@ -1,28 +1,23 @@
 // importando librerias
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 //#include <conio.h> // descomentar la linea para OS Windows
 
 int main()
 {
     // Declarando variables
-    int iTotalCompra, iCantidadRecibida, iBilletesVeinte, iMonedasDiez,
-        iMonedasCinco, iMonedasDos, iMonedasPeso;
-    float var, fCambio;
-    char cMensaje[] = "";
-
-    /* 
-      ESTE PROGRAMA SOLO FUNCIONA CON NUMEROS ENTEROS INGRESADOS
-      POR EL USUARIO
-    */
+    int  iBilletesVeinte, iMonedasDiez,
+        iMonedasCinco, iMonedasDos, iMonedasPeso, iMonedasCincuentaCentavos;
+    float fTotalCompra, fCantidadRecibida, var, fCambio;
 
     // Pidiendo datos al usuario
     printf("\n - Por favor ingrese el total de la compra: $");
-    scanf("%d", &iTotalCompra);
+    scanf("%f", &fTotalCompra);
     printf(" - Por favor ingrese la cantidad a recibir: $");
-    scanf("%d", &iCantidadRecibida);
+    scanf("%f", &fCantidadRecibida);
 
-    fCambio = iTotalCompra - iCantidadRecibida; // se obtienen 6 decimales
+    fCambio = fTotalCompra - fCantidadRecibida; // se obtienen 6 decimales
 
     printf("\nEl cambio a recibir es de : $%.2f\n\n", fCambio);
 
@@ -66,8 +61,15 @@ int main()
         fCambio = fCambio - (iMonedasPeso * 1);
     }
 
+    if(fCambio >= 0.5){
+        // calcular la cantidad de monedas de 50 centavos que se le daran al usuario
+        iMonedasCincuentaCentavos = fCambio / 0.5;
+        printf("La cantidad de monedas de cincuenta centavos son: %d\n", iMonedasCincuentaCentavos);
+        // decrementar el valor del cambio en base a las monedas de 50 centavos otorgadas
+        fCambio = fCambio - (iMonedasCincuentaCentavos * 0.5);
+    }
+
     // pausando el programa para visualizar su salida
     //getch(); // descomentar la linea para OS windows
     return 0;
 }
-

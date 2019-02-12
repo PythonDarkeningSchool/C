@@ -47,7 +47,7 @@ int main()
     if (iLadoA == iLadoB && iLadoA == iLadoC && iLadoB == iLadoC){
         printf("Es un triangulo Equilatero \n");
     }
-    else if(iLadoA == iLadoB != iLadoC|| iLadoA == iLadoC != iLadoB|| iLadoB == iLadoC =! iLadoA){
+    else if(iLadoA == iLadoB != iLadoC|| iLadoA == iLadoC != iLadoB|| iLadoB == iLadoC != iLadoA){
             printf("Es un triangulo Isoceles \n");
     }
     else if(iLadoA != iLadoB && iLadoA!= iLadoC && iLadoB != iLadoC){

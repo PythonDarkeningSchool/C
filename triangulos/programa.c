@@ -10,12 +10,14 @@ int main()
     char iLadoA, iLadoB, iLadoC;
     int bandera = 0;
 
-    printf(" -Ingresa el valor del lado A: ");
-    scanf("%c", &iLadoA);
-    printf(" -ingresa el valor del lado B: \n");
-    scanf("%c", &iLadoB);
-    printf(" -ingresa el valor del lado C: ");
-    scanf("%c", &iLadoC);
+    /* se necesita poner un espacio en blanco cuando se escanea un tipo de dato
+       tipo char */
+    printf("Ingresa el valor del lado A: ");
+    scanf(" %c", &iLadoA);
+    printf("ingresa el valor del lado B: ");
+    scanf(" %c", &iLadoB);
+    printf("ingresa el valor del lado C: ");
+    scanf(" %c", &iLadoC);
 
     // Validando si los datos entrados son numeros
     if(!isdigit(iLadoA)){
@@ -45,7 +47,7 @@ int main()
     if (iLadoA == iLadoB && iLadoA == iLadoC && iLadoB == iLadoC){
         printf("Es un triangulo Equilatero \n");
     }
-    else if(iLadoA == iLadoB || iLadoA == iLadoC || iLadoB == iLadoC){
+    else if(iLadoA == iLadoB != iLadoC|| iLadoA == iLadoC != iLadoB|| iLadoB == iLadoC =! iLadoA){
             printf("Es un triangulo Isoceles \n");
     }
     else if(iLadoA != iLadoB && iLadoA!= iLadoC && iLadoB != iLadoC){
